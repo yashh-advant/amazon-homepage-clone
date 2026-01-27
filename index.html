@@ -6,71 +6,1142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Amazon Clone</title>
     <link rel="icon" href="./asset/amazon_icon.png">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="m-0 p-0 bg-black overflow-x-hidden">
+<body class="m-0 p-0 bg-black overflow-x-hidden font-sans">
 
-    <div class="flex flex-col bg-white min-h-screen w-full">
+    <div class="flex flex-col min-w-0 bg-[#e3e6e6] min-h-screen w-full">
 
-        <!-- HEADER -->
-        <header class="w-full flex items-center bg-[#131921] h-[32px] text-white px-1 gap-1">
+        <header id="top"
+            class="w-full flex fixed z-50 items-center bg-[#131921] h-[32px] sm:h-[50px] lg:h-[65px] text-white px-1 gap-1">
 
-            <!-- LEFT -->
             <div class="flex items-center gap-1 shrink-0">
-                <div class="flex items-center">
-                    <img src="./asset/amazon_white_logo.png" class="w-[22px] h-[14px]" />
-                    <span class="text-[9px] font-bold ml-[1px]">.in</span>
+                <div class="flex items-center lg:m-1">
+                    <img src="./asset/amazon_white_logo.png"
+                        class="w-[22px] h-[14px] sm:h-[30px] lg:h-[30px] lg:w-[70px] sm:w-[35px] sm:mt-1 " />
+                    <span class="text-[9px] sm:text-[11px] font-bold ml-[1px]">.in</span>
                 </div>
 
-                <div class="flex flex-col justify-center leading-none">
-                    <span class="text-[6px]">Delivering to Surat</span>
-                    <span class="text-[7px] font-bold">Update location</span>
+                <div class="flex flex-col justify-center leading-none sm:m-1 lg:mr-4">
+                    <span class="text-[6px] lg:text-[10px] sm:text-[9px]">Delivering to Surat</span>
+                    <span class="text-[7px] sm:text-[9px] lg:text-[14px] font-bold">Update location</span>
                 </div>
             </div>
 
-            <!-- CENTER (SEARCH) -->
-            <div class="flex flex-1 min-w-0 h-[18px]">
-                <select class="w-[22px] bg-[#d4d4d4] text-[7px] appearance-none text-center text-black rounded-l-sm">
+            <div class="flex flex-1 min-w-0 h-[18px] sm:h-[26px] lg:h-[34px] lg:m-2">
+                <select
+                    class="w-[22px] bg-[#d4d4d4] sm:w-[27px] lg:w-[34px] lg:text-[10px] sm:text-[9px] text-[7px] appearance-none text-center text-black rounded-l-sm">
                     <option>All</option>
                 </select>
 
                 <input type="text" placeholder="Search"
-                    class="flex-1 min-w-0 text-[7px] px-1 text-black outline-none" />
+                    class="flex-1 min-w-0 text-[7px] bg-white lg:text-[12px] sm:text-[10px] px-1 text-black outline-none" />
 
-                <button class="w-[18px] bg-[#f3a847] rounded-r-sm flex items-center justify-center">
-                    <img src="./asset/search.png" class="w-[14px] h-[14px]" />
+                <button
+                    class="w-[18px] bg-[#f3a847] lg:w-[34px] sm:w-[26px] rounded-r-sm flex items-center justify-center">
+                    <img src="./asset/search.png" class="w-[14px] h-[14px] lg:w-[16px] lg:h-[16px]" />
                 </button>
             </div>
 
-            <!-- RIGHT -->
-            <div class="flex items-center gap-1 shrink-0">
+            <div class="flex items-center gap-1 lg:gap-3 lg:ml-4 sm:gap-2 shrink-0 ">
 
                 <div class="flex items-center gap-[2px]">
-                    <img src="./asset/india-flag-icon.webp" class="w-[9px] h-[7px]" />
-                    <select class="text-[7px] font-bold appearance-none bg-transparent">
+                    <img src="./asset/india-flag-icon.webp"
+                        class="w-[9px] h-[7px] lg:w-[13px] lg:h-[11px] sm:w-[11px] sm:h-[9px]" />
+                    <select class="text-[7px] sm:text-[9px] lg:text-[11px] font-bold appearance-none bg-transparent">
                         <option>EN</option>
                     </select>
                 </div>
 
-                <div class="text-[7px] font-bold leading-none">
-                    <span class="block text-[6px] font-normal">Hello</span>
-                    Account
+                <div class="text-[7px] sm:text-[9px] lg:text-[12px] font-bold leading-none">
+                    <span class="block text-[6px] lg:text-[9px] sm:text-[7px] font-normal">Hello, sign in</span>
+                    Account & Lists
                 </div>
 
-                <div class="text-[7px] font-bold leading-none">
-                    <span class="block text-[6px] font-normal">Returns</span>
-                    Orders
+                <div class="text-[7px] sm:text-[9px] lg:text-[12px]  font-bold leading-none">
+                    <span class="block text-[6px] lg:text-[9px] sm:text-[7px] font-normal">Returns</span>
+                    & Orders
                 </div>
 
-                <img src="./asset/carts.png" class="w-[14px] h-[14px]" />
+                <img src="./asset/carts.png"
+                    class="w-[14px] h-[14px] lg:w-[21px] lg:mr-2 lg:h-[21px] sm:w-[18px] sm:h-[18px]" />
             </div>
 
         </header>
 
+        <header
+            class="w-full bg-[#232f3e] sm:mt-[50px] lg:mt-[65px] lg:h-[28px] lg:text-[11px] mt-[32px] h-[15px] sm:h-[24px] sm:text-[8px] flex justify-evenly min-w-0 text-white text-[4px] font-bold flex-nowrap items-center gap-3 px-2">
+            <div class="block">All</div>
+            <div class="block">Fresh</div>
+            <div class="block">MX Player</div>
+            <div class="block">Sell</div>
+            <div class="block">Bestsellers</div>
+            <div class="block">Today's Deals</div>
+            <div class="block">Mobiles</div>
+            <div class="block">Customer Service</div>
+            <div class="block">Prime ▾</div>
+            <div class="block">New Releases</div>
+            <div class="block">Amazon Pay</div>
+            <div class="block"> Fashion</div>
+            <div class="sm:block hidden">Electronics</div>
+            <div class="lg:block hidden">Home & Kitchen</div>
+            <div class="xl:block hidden">Books</div>
+            <div class="lg:block hidden">Computers</div>
+            <div class="xl:block hidden">Gift Cards</div>
+            <div class="xl:block hidden">Beauty & Personal Care</div>
+            <div class="2xl:xl:block hidden">Car & Motorbike</div>
+            <div class="xl:block hidden">Toys & Games</div>
+        </header>
+
+        <section class="relative flex  bg-red-500">
+            <div
+                class="h-[250px] lg:h-[500px] sm:h-[380px] lg:flex lg:justify-center lg:items-start flex-1   bg-[#e3e6e6]">
+                <button id="left-swap"
+                    class="absolute  lg:text-[50px]  text-[25px] text-gray-400 font-light top-5 sm:top-8 sm:left-2 top-5 left-1">
+                    < </button>
+                        <img id="tag-for-carousel"
+                            class="flex-1 min-w-0 w-full lg:flex-none sm:h-[260px] lg:h-[380px] h-[180px]"
+                            src="./asset/carousel-1.jpg" alt="" srcset="">
+
+                        <button id="right-swap"
+                            class="absolute lg:text-[50px] text-[25px] text-gray-400 font-light top-5 sm:top-8 sm:right-2 right-1">></button>
+            </div>
+
+            <div
+                class="w-full flex absolute sm:top-40 z-20 lg:top-56 min-w-0 justify-around top-[90px] lg:gap-5 lg:px-[80px] gap-3 sm:gap-4 px-5">
+
+                <div
+                    class="w-[100px] flex-1 h-[150px] sm:h-[222px] lg:rounded-sm lg:h-[275px] sm:w-[100px] bg-white p-2 min-h-[160px] ">
+                    <h6 class="text-[10px] lg:font-bold mb-2 sm:text-[14px] sm:mb-4">Revamp Your Home in Style</h6>
+                    <div class="grid grid-cols-2 lg:mt-8 place-items-center sm:gap-2">
+                        <div class="flex flex-col">
+                            <img class="w-[40px] h-[40px] sm:w-[65px] sm:h-[65px] lg:w-[95px] lg:h-[80px]"
+                                src="./asset/1._SY116_CB773342995_.jpg">
+                            <h6 class="text-[8px] sm:text-[12px]">mixer</h6>
+                        </div>
+                        <div class="flex flex-col">
+                            <img class="w-[40px] h-[40px] sm:w-[65px] sm:h-[65px] lg:w-[95px] lg:h-[80px]"
+                                src="./asset/2._SY116_CB773342995_.jpg">
+                            <h6 class="text-[8px] sm:text-[12px]">mixer</h6>
+                        </div>
+                        <div class="flex flex-col ">
+                            <img class="w-[40px] h-[40px] sm:w-[65px] sm:h-[65px] lg:w-[95px] lg:h-[80px]"
+                                src="./asset/3._SY116_CB773342995_.jpg">
+                            <h6 class="text-[8px] sm:text-[12px]">mixer</h6>
+                        </div>
+                        <div class="flex flex-col">
+                            <img class="w-[40px] h-[40px] sm:w-[65px] sm:h-[65px] lg:w-[95px] lg:h-[80px]"
+                                src="./asset/4._SY116_CB773342995_.jpg">
+                            <h6 class="text-[8px] sm:text-[12px]">mixer</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="w-[100px] flex-1 h-[150px] sm:h-[222px] lg:rounded-sm lg:h-[275px] sm:w-[100px] bg-white p-2 min-h-[160px] ">
+                    <h6 class="text-[10px] lg:font-bold mb-2 sm:text-[14px] sm:mb-4">Revamp Your Home in Style</h6>
+                    <div class="grid grid-cols-2 lg:mt-8 place-items-center sm:gap-2">
+                        <div class="flex flex-col">
+                            <img class="w-[40px] h-[40px] sm:w-[65px] sm:h-[65px] lg:w-[95px] lg:h-[80px] lg:w-[95px] lg:h-[80px]"
+                                src="./asset/1._SY116_CB773342995_.jpg">
+                            <h6 class="text-[8px] sm:text-[12px]">mixer</h6>
+                        </div>
+                        <div class="flex flex-col">
+                            <img class="w-[40px] h-[40px] sm:w-[65px] sm:h-[65px] lg:w-[95px] lg:h-[80px]"
+                                src="./asset/2._SY116_CB773342995_.jpg">
+                            <h6 class="text-[8px] sm:text-[12px]">mixer</h6>
+                        </div>
+                        <div class="flex flex-col ">
+                            <img class="w-[40px] h-[40px] sm:w-[65px] sm:h-[65px] lg:w-[95px] lg:h-[80px]"
+                                src="./asset/3._SY116_CB773342995_.jpg">
+                            <h6 class="text-[8px] sm:text-[12px]">mixer</h6>
+                        </div>
+                        <div class="flex flex-col">
+                            <img class="w-[40px] h-[40px] sm:w-[65px] sm:h-[65px] lg:w-[95px] lg:h-[80px]"
+                                src="./asset/4._SY116_CB773342995_.jpg">
+                            <h6 class="text-[8px] sm:text-[12px]">mixer</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="w-[100px] flex-1 h-[150px] sm:h-[222px] lg:rounded-sm lg:h-[275px] sm:w-[100px] bg-white p-2 min-h-[160px] ">
+                    <h6 class="text-[10px] lg:font-bold mb-2 sm:text-[14px] sm:mb-4">Revamp Your Home in Style</h6>
+                    <div class="grid grid-cols-2 lg:mt-8 place-items-center sm:gap-2">
+                        <div class="flex flex-col">
+                            <img class="w-[40px] h-[40px] sm:w-[65px] sm:h-[65px] lg:w-[95px] lg:h-[80px]"
+                                src="./asset/1._SY116_CB773342995_.jpg">
+                            <h6 class="text-[8px] sm:text-[12px]">mixer</h6>
+                        </div>
+                        <div class="flex flex-col">
+                            <img class="w-[40px] h-[40px] sm:w-[65px] sm:h-[65px] lg:w-[95px] lg:h-[80px]"
+                                src="./asset/2._SY116_CB773342995_.jpg">
+                            <h6 class="text-[8px] sm:text-[12px]">mixer</h6>
+                        </div>
+                        <div class="flex flex-col ">
+                            <img class="w-[40px] h-[40px] sm:w-[65px] sm:h-[65px] lg:w-[95px] lg:h-[80px]"
+                                src="./asset/3._SY116_CB773342995_.jpg">
+                            <h6 class="text-[8px] sm:text-[12px]">mixer</h6>
+                        </div>
+                        <div class="flex flex-col">
+                            <img class="w-[40px] h-[40px] sm:w-[65px] sm:h-[65px] lg:w-[95px] lg:h-[80px]"
+                                src="./asset/4._SY116_CB773342995_.jpg">
+                            <h6 class="text-[8px] sm:text-[12px]">mixer</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="w-[100px] hidden lg:block flex-1 h-[150px] sm:h-[222px] lg:rounded-sm lg:h-[275px] sm:w-[100px] bg-white p-2 min-h-[160px] ">
+                    <h6 class="text-[10px] lg:font-bold mb-2 sm:text-[14px] sm:mb-4">Revamp Your Home in Style</h6>
+                    <div class="grid grid-cols-2 lg:mt-8 place-items-center sm:gap-2">
+                        <div class="flex flex-col">
+                            <img class="w-[40px] h-[40px] sm:w-[65px] sm:h-[65px] lg:w-[95px] lg:h-[80px]"
+                                src="./asset/1._SY116_CB773342995_.jpg">
+                            <h6 class="text-[8px] sm:text-[12px]">mixer</h6>
+                        </div>
+                        <div class="flex flex-col">
+                            <img class="w-[40px] h-[40px] sm:w-[65px] sm:h-[65px] lg:w-[95px] lg:h-[80px]"
+                                src="./asset/2._SY116_CB773342995_.jpg">
+                            <h6 class="text-[8px] sm:text-[12px]">mixer</h6>
+                        </div>
+                        <div class="flex flex-col ">
+                            <img class="w-[40px] h-[40px] sm:w-[65px] sm:h-[65px] lg:w-[95px] lg:h-[80px]"
+                                src="./asset/3._SY116_CB773342995_.jpg">
+                            <h6 class="text-[8px] sm:text-[12px]">mixer</h6>
+                        </div>
+                        <div class="flex flex-col">
+                            <img class="w-[40px] h-[40px] sm:w-[65px] sm:h-[65px] lg:w-[95px] lg:h-[80px]"
+                                src="./asset/4._SY116_CB773342995_.jpg">
+                            <h6 class="text-[8px] sm:text-[12px]">mixer</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="w-[100px] flex-1 h-[150px] sm:h-[222px] lg:h-[260px] sm:w-[100px] bg-white p-2 min-h-[160px] ">
+                    <h6 class="text-[10px] mb-2 sm:text-[14px] sm:mb-4">Revamp Your Home in Style</h6>
+                    <div class="grid grid-cols-2 place-items-center sm:gap-2">
+                        <div class="flex flex-col">
+                            <img class="w-[40px] h-[40px] sm:w-[65px] sm:h-[65px]"
+                                src="./asset/1._SY116_CB773342995_.jpg">
+                            <h6 class="text-[8px] sm:text-[12px]">mixer</h6>
+                        </div>
+                        <div class="flex flex-col">
+                            <img class="w-[40px] h-[40px] sm:w-[65px] sm:h-[65px]"
+                                src="./asset/2._SY116_CB773342995_.jpg">
+                            <h6 class="text-[8px] sm:text-[12px]">mixer</h6>
+                        </div>
+                        <div class="flex flex-col ">
+                            <img class="w-[40px] h-[40px] sm:w-[65px] sm:h-[65px]"
+                                src="./asset/3._SY116_CB773342995_.jpg">
+                            <h6 class="text-[8px] sm:text-[12px]">mixer</h6>
+                        </div>
+                        <div class="flex flex-col">
+                            <img class="w-[40px] h-[40px] sm:w-[65px] sm:h-[65px]"
+                                src="./asset/4._SY116_CB773342995_.jpg">
+                            <h6 class="text-[8px] sm:text-[12px]">mixer</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-[100px] flex-1 h-[150px] sm:h-[222px] lg:h-[260px] sm:w-[100px] bg-white p-2 min-h-[160px] ">
+                    <h6 class="text-[10px] mb-2 sm:text-[14px] sm:mb-4">Revamp Your Home in Style</h6>
+                    <div class="grid grid-cols-2 place-items-center sm:gap-2">
+                        <div class="flex flex-col">
+                            <img class="w-[40px] h-[40px] sm:w-[65px] sm:h-[65px]"
+                                src="./asset/1._SY116_CB773342995_.jpg">
+                            <h6 class="text-[8px] sm:text-[12px]">mixer</h6>
+                        </div>
+                        <div class="flex flex-col">
+                            <img class="w-[40px] h-[40px] sm:w-[65px] sm:h-[65px]"
+                                src="./asset/2._SY116_CB773342995_.jpg">
+                            <h6 class="text-[8px] sm:text-[12px]">mixer</h6>
+                        </div>
+                        <div class="flex flex-col ">
+                            <img class="w-[40px] h-[40px] sm:w-[65px] sm:h-[65px]"
+                                src="./asset/3._SY116_CB773342995_.jpg">
+                            <h6 class="text-[8px] sm:text-[12px]">mixer</h6>
+                        </div>
+                        <div class="flex flex-col">
+                            <img class="w-[40px] h-[40px] sm:w-[65px] sm:h-[65px]"
+                                src="./asset/4._SY116_CB773342995_.jpg">
+                            <h6 class="text-[8px] sm:text-[12px]">mixer</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-[100px] hidden lg:block flex-1 h-[150px] lg:h-[260px] sm:h-[222px] sm:w-[100px] bg-white p-2 min-h-[160px] ">
+                    <h6 class="text-[10px] mb-2 sm:text-[14px] sm:mb-4">Revamp Your Home in Style</h6>
+                    <div class="grid grid-cols-2 place-items-center sm:gap-2">
+                        <div class="flex flex-col">
+                            <img class="w-[40px] h-[40px] sm:w-[65px] sm:h-[65px]"
+                                src="./asset/1._SY116_CB773342995_.jpg">
+                            <h6 class="text-[8px] sm:text-[12px]">mixer</h6>
+                        </div>
+                        <div class="flex flex-col">
+                            <img class="w-[40px] h-[40px] sm:w-[65px] sm:h-[65px]"
+                                src="./asset/2._SY116_CB773342995_.jpg">
+                            <h6 class="text-[8px] sm:text-[12px]">mixer</h6>
+                        </div>
+                        <div class="flex flex-col ">
+                            <img class="w-[40px] h-[40px] sm:w-[65px] sm:h-[65px]"
+                                src="./asset/3._SY116_CB773342995_.jpg">
+                            <h6 class="text-[8px] sm:text-[12px]">mixer</h6>
+                        </div>
+                        <div class="flex flex-col">
+                            <img class="w-[40px] h-[40px] sm:w-[65px] sm:h-[65px]"
+                                src="./asset/4._SY116_CB773342995_.jpg">
+                            <h6 class="text-[8px] sm:text-[12px]">mixer</h6>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+        </section>
+
+        <div class="flex flex-col h-[100px] sm:h-[130px] lg:mx-[80px] lg:h-[180px] bg-white lg:p-3 m-4 p-2 ">
+            <h4 class="text-[10px] sm:text-[13px] lg:font-bold lg:text-[16px] font-semibold">Dicover new Mobiles</h4>
+            <div class="p-2 flex gap-2 overflow-x-auto lg:gap-4 lg:mt-3 overflow-y-hidden overflow-x-scroll">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px] "
+                    src="./asset/mobile-1.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-2.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-3.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-4.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-1.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-2.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-3.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-4.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-1.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-2.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-3.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-4.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-1.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-2.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-3.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-4.jpg">
+            </div>
+        </div>
+
+        <div class="flex flex-col h-[100px] lg:mx-[80px] lg:h-[180px] sm:h-[130px] bg-white  mx-4 my-[2px] p-2 ">
+            <h4 class="text-[10px] sm:text-[13px] lg:font-bold lg:text-[16px] font-semibold">Find Accesories</h4>
+            <div class="p-2 flex gap-3 lg:gap-4 lg:mt-3 overflow-x-auto overflow-y-hidden">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/accessories-1.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/asse-2.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/asse-3.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/asse-4.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/asse-6.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/accessories-1.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/asse-5.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/asse-4.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/asse-3.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/accessories-1.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/asse-2.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/asse-4.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/asse-5.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/asse-4.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/asse-3.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/accessories-1.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/asse-2.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/asse-4.jpg">
+            </div>
+        </div>
+
+        <div class="mx-4 my-2 min-h-[130px] lg:h-[260px] lg:mx-[80px] sm:h-[180px] flex gap-3">
+
+            <div class="bg-white flex-1 w-fit p-2">
+                <h6 class="text-[10px] sm:text-[13px] lg:text-[15px] lg:mt-1 lg:mb-4 font-semibold">Best seller in
+                    Beauty</h6>
+                <div class="flex sm:mt-2 justify-center">
+                    <img id="beauty-card-image-1" class=" h-[50px] sm:h-[64px] lg:mb-2"
+                        src="./asset/card-carousel-1.jpg">
+                </div>
+                <div id="beauty-card-text-1" class="text-[5px] lg:text-[12px] lg:mb-4 sm:text-[8px] mt-1">soap with nim
+                    leaves. <span class="block lg:text-[13px] text-[8px] sm:text-[10px] mb-3 font-semibold">price
+                        380rs</span>
+                </div>
+
+                <div class="flex justify-around lg:gap-1">
+
+                    <div id="beauty-card-options-1" class=" rounded-sm lg:p-2">
+                        <img class="w-[25px] h-[25px] lg:h-[45px] lg:w-[35px] border-2 lg:mb-2 rounded-sm p-1 sm:w-[33px] sm:h-[33px]"
+                            src="./asset/card-carousel-1.jpg">
+                        <div id="beauty-card-text-1"
+                            class="text-[5px] lg:text-[12px] lg:mb-4 hidden  sm:text-[8px] mt-1">soap
+                            with nim leaves.
+                            <span class="block m-0 text-[8px] lg:text-[13px] mb-3 font-semibold">price
+                                380rs</span>
+                        </div>
+                    </div>
+
+                    <div id="beauty-card-options-1" class=" rounded-sm lg:p-2">
+                        <img class="w-[25px] h-[25px] lg:h-[45px] lg:w-[35px] lg:mb-2 rounded-sm p-1 lg:mb-2"
+                            src="./asset/card-carousel-2.jpg">
+                        <div id="beauty-card-text" class="hidden text-[5px]">Cetaphil facewash <span
+                                class="block m-0 text-[8px] lg:text-[13px] mb-3 font-semibold">price
+                                500rs</span></div>
+                    </div>
+
+                    <div id="beauty-card-options-1" class=" rounded-sm lg:p-2">
+                        <img class="w-[25px] h-[25px] lg:h-[45px] lg:w-[35px] lg:mb-2 rounded-sm p-1 lg:mb-2"
+                            src="./asset/card-carousel-3.jpg">
+                        <div id="beauty-card-text" class="hidden text-[5px] m-2">FaceWash with alovera. <span
+                                class="block m-0 text-[8px] lg:text-[13px] mb-3 font-semibold">price
+                                650rs</span></div>
+                    </div>
+
+                    <div id="beauty-card-options-1" class=" rounded-sm lg:p-2">
+                        <img class="w-[25px] h-[25px] lg:h-[45px] lg:w-[35px] lg:mb-2 rounded-sm p-1 lg:mb-2"
+                            src="./asset/card-carousel-4.jpg">
+                        <div id="beauty-card-text" class="hidden text-[5px]">Anti dendruff shampoo. <span
+                                class="block m-0 text-[8px] lg:text-[13px] mb-3 font-semibold">price
+                                800rs</span></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="bg-white flex-1 w-fit p-2">
+                <h6 class="text-[10px] sm:text-[13px] lg:text-[15px] lg:mt-1 lg:mb-4 font-semibold">Best seller in
+                    Beauty</h6>
+                <div class="flex sm:mt-2 justify-center">
+                    <img id="beauty-card-image-4" class=" h-[50px] sm:h-[64px] lg:mb-2"
+                        src="./asset/card-carousel-4.jpg">
+                </div>
+                <div id="beauty-card-text-4" class="text-[5px] lg:text-[12px] lg:mb-4 sm:text-[8px] mt-1">Anti dendruff
+                    shampoo. <span class="block m-0 text-[8px] lg:text-[13px] mb-3 font-semibold">price
+                        800rs</span>
+                </div>
+
+                <div class="flex justify-around gap-1">
+
+                    <div id="beauty-card-options-4" class=" rounded-sm lg:p-2">
+                        <img class="w-[25px] h-[25px] lg:h-[45px] lg:w-[35px] lg:mb-2 rounded-sm p-1 lg:mb-2 sm:w-[33px] sm:h-[33px]"
+                            src="./asset/card-carousel-1.jpg">
+                        <div id="beauty-card-text-4"
+                            class="text-[5px] lg:text-[12px] lg:mb-4 hidden  sm:text-[8px] mt-1">soap
+                            with nim leaves.
+                            <span class="block m-0 text-[8px] lg:text-[13px] mb-3 font-semibold">price
+                                380rs</span>
+                        </div>
+                    </div>
+
+                    <div id="beauty-card-options-4" class=" rounded-sm lg:p-2">
+                        <img class="w-[25px] h-[25px] lg:h-[45px] lg:w-[35px] lg:mb-2 rounded-sm p-1 lg:mb-2"
+                            src="./asset/card-carousel-2.jpg">
+                        <div id="beauty-card-text" class="hidden text-[5px]">Cetaphil facewash <span
+                                class="block m-0 text-[8px] lg:text-[13px] mb-3 font-semibold">price
+                                500rs</span></div>
+                    </div>
+
+                    <div id="beauty-card-options-4" class=" rounded-sm lg:p-2">
+                        <img class="w-[25px] h-[25px] lg:h-[45px] lg:w-[35px] lg:mb-2 rounded-sm p-1 lg:mb-2"
+                            src="./asset/card-carousel-3.jpg">
+                        <div id="beauty-card-text" class="hidden text-[5px] m-2">FaceWash with alovera. <span
+                                class="block m-0 text-[8px] lg:text-[13px] mb-3 font-semibold">price
+                                650rs</span></div>
+                    </div>
+
+                    <div id="beauty-card-options-4" class=" rounded-sm lg:p-2">
+                        <img class="w-[25px] h-[25px] lg:h-[45px] border-2 lg:w-[35px] lg:mb-2 rounded-sm p-1 lg:mb-2"
+                            src="./asset/card-carousel-4.jpg">
+                        <div id="beauty-card-text" class="hidden text-[5px]">Anti dendruff shampoo. <span
+                                class="block m-0 text-[8px] lg:text-[13px] mb-3 font-semibold">price
+                                800rs</span></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="bg-white flex-1 w-fit p-2">
+                <h6 class="text-[10px] sm:text-[13px] lg:text-[15px] lg:mt-1 lg:mb-4 font-semibold">Best seller in
+                    Beauty</h6>
+                <div class="flex sm:mt-2 justify-center">
+                    <img id="beauty-card-image-3" class=" h-[50px] sm:h-[64px] lg:mb-2"
+                        src="./asset/card-carousel-3.jpg">
+                </div>
+                <div id="beauty-card-text-3" class="text-[5px] lg:text-[12px] lg:mb-4 sm:text-[8px] mt-1">FaceWash with
+                    alovera. <span class="block m-0 text-[8px] lg:text-[13px] mb-3 font-semibold">price
+                        650rs</span>
+                </div>
+
+                <div class="flex justify-around gap-1">
+
+                    <div id="beauty-card-options-3" class=" rounded-sm lg:p-2">
+                        <img class="w-[25px] h-[25px] lg:h-[45px] lg:w-[35px] lg:mb-2 rounded-sm p-1 lg:mb-2 sm:w-[33px] sm:h-[33px]"
+                            src="./asset/card-carousel-1.jpg">
+                        <div id="beauty-card-text-1"
+                            class="text-[5px] lg:text-[12px] lg:mb-4 hidden  sm:text-[8px] mt-1">soap
+                            with nim leaves.
+                            <span class="block m-0 text-[8px] lg:text-[13px] mb-3 font-semibold">price
+                                380rs</span>
+                        </div>
+                    </div>
+
+                    <div id="beauty-card-options-3" class=" rounded-sm lg:p-2">
+                        <img class="w-[25px] h-[25px] lg:h-[45px] lg:w-[35px] lg:mb-2 rounded-sm p-1 lg:mb-2"
+                            src="./asset/card-carousel-2.jpg">
+                        <div id="beauty-card-text" class="hidden text-[5px]">Cetaphil facewash <span
+                                class="block m-0 text-[8px] lg:text-[13px] mb-3 font-semibold">price
+                                500rs</span></div>
+                    </div>
+
+                    <div id="beauty-card-options-3" class=" rounded-sm lg:p-2">
+                        <img class="w-[25px] h-[25px] lg:h-[45px] border-2 lg:w-[35px] lg:mb-2 rounded-sm p-1 lg:mb-2"
+                            src="./asset/card-carousel-3.jpg">
+                        <div id="beauty-card-text" class="hidden text-[5px] m-2">FaceWash with alovera. <span
+                                class="block m-0 text-[8px] lg:text-[13px] mb-3 font-semibold">price
+                                650rs</span></div>
+                    </div>
+
+                    <div id="beauty-card-options-3" class=" rounded-sm lg:p-2">
+                        <img class="w-[25px] h-[25px] lg:h-[45px] lg:w-[35px] lg:mb-2 rounded-sm p-1 lg:mb-2"
+                            src="./asset/card-carousel-4.jpg">
+                        <div id="beauty-card-text" class="hidden text-[5px]">Anti dendruff shampoo. <span
+                                class="block m-0 text-[8px] lg:text-[13px] mb-3 font-semibold">price
+                                800rs</span></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class=" hidden lg:block bg-white flex-1 w-fit p-2">
+                <h6 class="text-[10px] sm:text-[13px] lg:text-[15px] lg:mt-1 lg:mb-4 font-semibold">Best seller in
+                    Beauty</h6>
+                <div class="flex sm:mt-2 justify-center">
+                    <img id="beauty-card-image-2" class=" h-[50px] sm:h-[64px] lg:mb-2"
+                        src="./asset/card-carousel-2.jpg">
+                </div>
+                <div id="beauty-card-text-2" class="text-[5px] lg:text-[12px] lg:mb-4 sm:text-[8px] mt-1">Cetaphil
+                    facewash <span class="block lg:text-[13px] text-[8px] text-[10px] mb-3 font-semibold">price
+                        500rs</span>
+                </div>
+
+                <div class=" flex justify-around gap-1">
+
+                    <div id="beauty-card-options-2" class=" rounded-sm lg:p-2">
+                        <img class="w-[25px] h-[25px] lg:h-[45px] lg:w-[35px] lg:mb-2 rounded-sm p-1 lg:mb-2 sm:w-[33px] sm:h-[33px]"
+                            src="./asset/card-carousel-1.jpg">
+                        <div id="beauty-card-text-1"
+                            class="text-[5px] lg:text-[12px] lg:mb-4 hidden  sm:text-[8px] mt-1">soap
+                            with nim leaves.
+                            <span class="block m-0 text-[8px] lg:text-[13px] mb-3 font-semibold">price
+                                380rs</span>
+                        </div>
+                    </div>
+
+                    <div id="beauty-card-options-2" class=" rounded-sm lg:p-2">
+                        <img class="w-[25px] h-[25px] lg:h-[45px] border-2 lg:w-[35px] lg:mb-2 rounded-sm p-1 lg:mb-2"
+                            src="./asset/card-carousel-2.jpg">
+                        <div id="beauty-card-text" class="hidden text-[5px]">Cetaphil facewash <span
+                                class="block m-0 text-[8px] lg:text-[13px] mb-3 font-semibold">price
+                                500rs</span></div>
+                    </div>
+
+                    <div id="beauty-card-options-2" class=" rounded-sm lg:p-2">
+                        <img class="w-[25px] h-[25px] lg:h-[45px] lg:w-[35px] lg:mb-2 rounded-sm p-1 lg:mb-2"
+                            src="./asset/card-carousel-3.jpg">
+                        <div id="beauty-card-text" class="hidden text-[5px] m-2">FaceWash with alovera. <span
+                                class="block m-0 text-[8px] lg:text-[13px] mb-3 font-semibold">price
+                                650rs</span></div>
+                    </div>
+
+                    <div id="beauty-card-options-2" class=" rounded-sm lg:p-2">
+                        <img class="w-[25px] h-[25px] lg:h-[45px] lg:w-[35px] lg:mb-2 rounded-sm p-1 lg:mb-2"
+                            src="./asset/card-carousel-4.jpg">
+                        <div id="beauty-card-text" class="hidden text-[5px]">Anti dendruff shampoo. <span
+                                class="block m-0 text-[8px] lg:text-[13px] mb-3 font-semibold">price
+                                800rs</span></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="flex flex-col h-[100px] lg:mx-[80px] lg:h-[180px] sm:h-[130px] bg-white  mx-4 my-[2px] p-2 ">
+            <h4 class="text-[10px] sm:text-[13px] lg:font-bold lg:text-[16px] font-semibold">Your cookware gets easy
+            </h4>
+            <div class="p-2 flex gap-3 lg:gap-4 lg:mt-3 overflow-x-auto overflow-y-hidden">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px] "
+                    src="./asset/cookware-1.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cookware-2.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cookware-3.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cookware-4.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cookware-5.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cookware-3.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cookware-2.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cookware-2.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cookware-3.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cookware-4.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cookware-5.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cookware-3.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cookware-2.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cookware-2.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cookware-3.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cookware-4.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cookware-5.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cookware-3.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cookware-2.jpg">
+
+            </div>
+        </div>
+
+        <div class="mx-4 my-2 min-h-[150px] lg:mx-[80px] lg:h-[260px] sm:h-[180px] flex gap-2 lg:gap-3"
+            id="toy-item-container">
+
+            <div class="bg-white  flex-1 w-fit p-2">
+                <h6 class="text-[10px] sm:text-[12px] lg:text-[15px] lg:mb-4 font-semibold sm:mt-1">Starting ₹199 |
+                    Bring joy home with every
+                    toy</h6>
+                <div value="1" class="relative flex justify-center item-image-container">
+                    <button class="absolute sm:text-lg left-1 top-6 item-scroll-left">&leftarrow;</button>
+                    <img class="m-2 h-[50px] sm:h-[65px] item-scroll lg:h-[80px] sm:mb-2 sm:mt-2"
+                        src="./asset/item-ima-1.jpg">
+                    <button class="absolute sm:text-lg right-1 top-6  item-scroll-right">&rightarrow;</button>
+                </div>
+                <div class="text-[5px] sm:mt-1 lg:text-[11px] lg:mt-4 sm:text-[8px] ">qwik3D Dummy 13 Fully Articulated
+                    Action Figure | 3D
+                    Printed Robot Assembly Kit<span
+                        class="block sm:text-[10px] lg:text-[15px] lg:mt-2 sm:mt-1 text-[8px] font-semibold">price
+                        256</span></div>
+            </div>
+
+            <div class="bg-white  flex-1 w-fit p-2">
+                <h6 class="text-[10px] sm:text-[12px] lg:text-[15px] lg:mb-4 font-semibold sm:mt-1">Starting ₹199 |
+                    Bring joy home with every
+                    toy</h6>
+                <div value="4" class="relative flex justify-center item-image-container">
+                    <button class="absolute  left-1 top-6 sm:text-lg item-scroll-left">&leftarrow;</button>
+                    <img class="m-2 h-[50px] sm:h-[65px] item-scroll lg:h-[80px] sm:mb-2 sm:mt-2"
+                        src="./asset/item-ima-4.jpg">
+                    <button class="absolute sm:text-lg right-1 top-6 item-scroll-right">&rightarrow;</button>
+                </div>
+                <div class="text-[5px] sm:mt-1 lg:text-[11px] lg:mt-4 sm:text-[8px] ">qwik3D Dummy 13 Fully Articulated
+                    Action Figure | 3D
+                    Printed Robot Assembly Kit<span
+                        class="block sm:text-[10px] lg:text-[15px] lg:mt-2 sm:mt-1 text-[8px] font-semibold">price
+                        256</span></div>
+            </div>
+
+            <div class="bg-white  flex-1 w-fit p-2">
+                <h6 class="text-[10px] sm:text-[12px] lg:text-[15px] lg:mb-4 font-semibold sm:mt-1">Starting ₹199 |
+                    Bring joy home with every
+                    toy</h6>
+                <div value="3" class="relative flex justify-center item-image-container">
+                    <button class="absolute sm:text-lg left-1 top-6 item-scroll-left">&leftarrow;</button>
+                    <img class="m-2 h-[50px] sm:h-[65px] item-scroll lg:h-[80px] sm:mb-2 sm:mt-2"
+                        src="./asset/item-ima-3.jpg">
+                    <!-- <img id="item-scroll-2" class="m-2 h-[50px] hidden" src="./asset/item-ima-2.jpg">
+                    <img id="item-scroll-3" class="m-2 h-[50px] hidden" src="./asset/item-ima-3.jpg">
+                    <img id="item-scroll-4" class="m-2 h-[50px] hidden" src="./asset/item-ima-4.jpg">
+                    <img id="item-scroll-5" class="m-2 h-[50px] hidden" src="./asset/item-ima-5.jpg"> -->
+
+                    <button class="absolute sm:text-lg right-1 top-6  item-scroll-right">&rightarrow;</button>
+                </div>
+                <div class="text-[5px] sm:mt-1 lg:text-[11px] lg:mt-4 sm:text-[8px] ">qwik3D Dummy 13 Fully Articulated
+                    Action Figure | 3D
+                    Printed Robot Assembly Kit<span
+                        class="block sm:text-[10px] lg:text-[15px] lg:mt-2 sm:mt-1 text-[8px] font-semibold">price
+                        256</span></div>
+            </div>
+
+            <div class="bg-white hidden lg:block flex-1 w-fit p-2">
+                <h6 class="text-[10px] sm:text-[12px] lg:text-[15px] lg:mb-4 font-semibold sm:mt-1">Starting ₹199 |
+                    Bring joy home with every
+                    toy</h6>
+                <div value="2" class="relative flex justify-center item-image-container">
+                    <button class="absolute sm:text-lg left-1 top-6 item-scroll-left">&leftarrow;</button>
+                    <img class="m-2 h-[50px] sm:h-[65px] item-scroll lg:h-[80px] sm:mb-2 sm:mt-2"
+                        src="./asset/item-ima-2.jpg">
+                    <button class="absolute sm:text-lg right-1 top-6 item-scroll-right">&rightarrow;</button>
+                </div>
+                <div class="text-[5px] sm:mt-1 lg:text-[11px] lg:mt-4 sm:text-[8px] ">qwik3D Dummy 13 Fully Articulated
+                    Action Figure | 3D
+                    Printed Robot Assembly Kit<span
+                        class="block sm:text-[10px] lg:text-[15px] lg:mt-2 sm:mt-1 text-[8px] font-semibold">price
+                        256</span></div>
+            </div>
+
+        </div>
+
+        <div class="flex flex-col h-[100px] lg:mx-[80px] lg:h-[180px] sm:h-[130px] bg-white  mx-4 my-[2px] p-2 ">
+            <h4 class="text-[10px] sm:text-[13px] lg:font-bold lg:text-[16px] font-semibold">Best seller in Clothing
+            </h4>
+            <div class="p-2 flex gap-3 lg:gap-4 lg:mt-3 overflow-x-auto overflow-y-hidden">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cloth-1.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cloth-2.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cloth-3.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cloth-4.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cloth-5.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cloth-3.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cloth-2.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cloth-4.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cloth-5.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cloth-1.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cloth-2.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cloth-3.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cloth-4.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cloth-5.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cloth-3.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cloth-2.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cloth-4.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/cloth-5.jpg">
+            </div>
+        </div>
+
+        <div
+            class="flex flex-col h-[100px] lg:mx-[80px] lg:h-[180px] sm:h-[130px] lg:mt-2 bg-white  mx-4 my-[2px] p-2 ">
+            <h4 class="text-[10px] sm:text-[13px] lg:font-bold lg:text-[16px] font-semibold">Best seller in Accesories
+            </h4>
+            <div class="p-2 lg:gap-4 lg:mt-3 flex gap-3 overflow-x-auto overflow-y-hidden">
+                <video class="h-[70px] w-[90px] lg:h-[120px] lg:w-[180px] mb-4 lg:mb-14" autoplay
+                    oncontextmenu=" return false" src="./asset/5402068-hd_1280_720_30fps.mp4"></video>
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/asse-2.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/asse-3.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/asse-4.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/asse-6.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/accessories-1.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/asse-5.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/asse-4.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/asse-3.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/accessories-1.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/asse-6.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/accessories-1.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/asse-5.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/asse-4.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/asse-3.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/accessories-1.jpg">
+            </div>
+        </div>
+
+        <div class="mx-4 my-2 min-h-[150px] lg:mx-[80px] flex gap-2" id="toy-item-container">
+
+            <div class="bg-white flex-1 w-fit p-2">
+                <h6 class="text-[10px] sm:text-[13px] lg:text-[15px] lg:mb-4 font-semibold">Best seller in Beauty</h6>
+                <div class="flex sm:mt-2 mt-2 justify-center">
+                    <img id="beauty-card-image-1" class=" h-[50px] sm:h-[64px] mb-2" src="./asset/card-carousel-1.jpg">
+                </div>
+                <div id="beauty-card-text-1" class="text-[5px] lg:text-[12px] lg:mb-4 sm:text-[8px] mt-1">soap with nim
+                    leaves. <span class="block lg:text-[13px] text-[8px] sm:text-[10px] mb-3 font-semibold">price
+                        380rs</span>
+                </div>
+
+                <div class="flex justify-around lg:gap-1">
+
+                    <div id="beauty-card-options-1" class="lg:border-0 rounded-sm lg:p-2">
+                        <img class="w-[25px] h-[25px] lg:h-[45px] border-2 lg:w-[35px] lg:mb-2 rounded-sm p-1 sm:w-[33px] sm:h-[33px]"
+                            src="./asset/card-carousel-1.jpg">
+                        <div id="beauty-card-text-1"
+                            class="text-[5px] lg:text-[12px] lg:mb-4 hidden  sm:text-[8px] mt-1">soap
+                            with nim leaves.
+                            <span class="block m-0 text-[8px] lg:text-[13px] mb-3 font-semibold">price
+                                380rs</span>
+                        </div>
+                    </div>
+
+                    <div id="beauty-card-options-1" class=" rounded-sm lg:p-2">
+                        <img class="w-[25px] h-[25px] lg:h-[45px] lg:w-[35px] lg:mb-2 rounded-sm p-1"
+                            src="./asset/card-carousel-2.jpg">
+                        <div id="beauty-card-text" class="hidden text-[5px]">Cetaphil facewash <span
+                                class="block m-0 text-[8px] lg:text-[13px] mb-3 font-semibold">price
+                                500rs</span></div>
+                    </div>
+
+                    <div id="beauty-card-options-1" class=" rounded-sm lg:p-2">
+                        <img class="w-[25px] h-[25px] lg:h-[45px] lg:w-[35px] lg:mb-2 rounded-sm p-1"
+                            src="./asset/card-carousel-3.jpg">
+                        <div id="beauty-card-text" class="hidden text-[5px] m-2">FaceWash with alovera. <span
+                                class="block m-0 text-[8px] lg:text-[13px] mb-3 font-semibold">price
+                                650rs</span></div>
+                    </div>
+
+                    <div id="beauty-card-options-1" class=" rounded-sm lg:p-2">
+                        <img class="w-[25px] h-[25px] lg:h-[45px] lg:w-[35px] lg:mb-2 rounded-sm p-1"
+                            src="./asset/card-carousel-4.jpg">
+                        <div id="beauty-card-text" class="hidden text-[5px]">Anti dendruff shampoo. <span
+                                class="block m-0 text-[8px] lg:text-[13px] mb-3 font-semibold">price
+                                800rs</span></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="bg-white  flex-1 w-fit p-2">
+                <h6 class="text-[10px] sm:text-[12px] lg:text-[15px] lg:mb-4 font-semibold sm:mt-1">Starting ₹199 |
+                    Bring joy home with every
+                    toy</h6>
+                <div value="4" class="relative flex justify-center item-image-container">
+                    <button class="absolute sm:text-lg left-1 top-6 item-scroll-left">&leftarrow;</button>
+                    <img class="m-2 h-[50px] sm:h-[65px] item-scroll lg:h-[80px] sm:mb-2 sm:mt-2"
+                        src="./asset/item-ima-4.jpg">
+                    <button class="absolute sm:text-lg right-1 top-6  item-scroll-right">&rightarrow;</button>
+                </div>
+                <div class="text-[5px] sm:mt-1 lg:text-[12px] lg:mt-4 sm:text-[8px] ">qwik3D Dummy 13 Fully Articulated
+                    Action Figure | 3D
+                    Printed Robot Assembly Kit<span
+                        class="block sm:text-[10px] lg:text-[15px] lg:mt-2 sm:mt-1 text-[8px] font-semibold">price
+                        256</span></div>
+            </div>
+
+            <div class="bg-white  flex-1 w-fit p-2">
+                <h6 class="text-[10px] sm:text-[12px] lg:text-[15px] lg:mb-4 font-semibold sm:mt-1">Starting ₹199 |
+                    Bring joy home with every
+                    toy</h6>
+                <div value="1" class="relative flex justify-center item-image-container">
+                    <button class="absolute sm:text-lg left-1 top-6 item-scroll-left">&leftarrow;</button>
+                    <img class="m-2 h-[50px] sm:h-[65px] item-scroll lg:h-[80px] sm:mb-2 sm:mt-2"
+                        src="./asset/item-ima-1.jpg">
+                    <button class="absolute sm:text-lg right-1 top-6  item-scroll-right">&rightarrow;</button>
+                </div>
+                <div class="text-[5px] sm:mt-1 lg:text-[12px] lg:mt-4 sm:text-[8px] ">qwik3D Dummy 13 Fully Articulated
+                    Action Figure | 3D
+                    Printed Robot Assembly Kit<span
+                        class="block sm:text-[10px] lg:text-[15px] lg:mt-2 sm:mt-1 text-[8px] font-semibold">price
+                        256</span></div>
+            </div>
+
+            <div class="bg-white hidden lg:block  flex-1 w-fit p-2">
+                <h6 class="text-[10px] sm:text-[12px] lg:text-[15px] lg:mb-4 font-semibold sm:mt-1">Starting ₹199 |
+                    Bring joy home with every
+                    toy</h6>
+                <div value="2" class="relative flex justify-center item-image-container">
+                    <button class="absolute sm:text-lg left-1 top-6 item-scroll-left">&leftarrow;</button>
+                    <img class="m-2 h-[50px] sm:h-[65px] item-scroll lg:h-[80px] sm:mb-2 sm:mt-2"
+                        src="./asset/item-ima-2.jpg">
+                    <button class="absolute sm:text-lg right-1 top-6 item-scroll-right">&rightarrow;</button>
+                </div>
+                <div class="text-[5px] sm:mt-1 lg:text-[12px] lg:mt-4 sm:text-[8px] ">qwik3D Dummy 13 Fully Articulated
+                    Action Figure | 3D
+                    Printed Robot Assembly Kit<span
+                        class="block sm:text-[10px] lg:text-[15px] lg:mt-2 sm:mt-1 text-[8px] font-semibold">price
+                        256</span></div>
+            </div>
+
+
+
+        </div>
+
+        <div class="flex my-2 flex-col sm:h-[130px] mx-4 lg:mx-[80px] lg:h-[180px] h-[100px] bg-white  p-2 ">
+            <h4 class="text-[10px] sm:text-[13px] lg:font-bold lg:text-[16px] font-semibold">Dicover new Mobiles</h4>
+            <div class="p-2 flex gap-2 overflow-x-auto lg:gap-4 lg:mt-3 overflow-y-hidden">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-1.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-2.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-3.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-4.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-1.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-2.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-3.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-4.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-1.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-2.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-3.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-4.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-1.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-2.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-3.jpg">
+                <img class="h-[55px] w-[55px] sm:h-[70px] sm:w-[70px] lg:h-[100px] lg:w-[100px]"
+                    src="./asset/mobile-4.jpg">
+            </div>
+        </div>
+
+        <div class="w-full border-t border-b  border-gray-300 py-2 flex justify-center">
+            <div class="text-center">
+
+                <h2 class="text-[13px] lg:text-[15px] sm:text-[14px] font-semibold mb-2">
+                    See personalized recommendations
+                </h2>
+
+                <button
+                    class=" bg-yellow-400 sm:text-[10px] lg:text-[10px] lg:w-[150px] lg:px-10  hover:bg-yellow-500 text-black text-center text-[8px] font-semibold max-w-[150px] font-medium px-10 py-2 rounded-full">
+                    Sign in
+                </button>
+
+                <p class=" mt-2 sm:text-[9px] lg:text-[11px] text-[7px]">
+                    New customer?
+                    <a href="#" class="text-blue-600  hover:underline">
+                        Start here.
+                    </a>
+                </p>
+
+            </div>
+        </div>
+
+        <footer class="mt-2">
+            <div
+                class="h-[20px] lg:h-[25px] sm:h-[23px] sm:text-[9px] lg:text-[11px] bg-[#485769] text-[8px] flex justify-center items-center text-white py-2">
+                <a href="#top"> Back to
+                    Top</a>
+            </div>
+
+            <div class="flex justify-around bg-[#232f3e] gap-2 p-4">
+
+                <div>
+                    <h4 class="text-[8px] sm:text-[9px] lg:text-[18px] lg:mb-1 font-semibold text-white mb-1">Get to
+                        Know Us</h4>
+                    <ul class="text-[6px] sm:text-[7px] lg:text-[15px] lg:mt-4 lg:py-2 text-white py-1">
+                        <li><a href="#">About Amazon</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press Releases</a></li>
+                        <li><a href="#">Amazon Science</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-[8px] sm:text-[9px] lg:text-[18px] lg:mb-1 font-semibold text-white mb-1">Connect
+                        with Us</h4>
+                    <ul class="text-[6px] sm:text-[7px] lg:text-[15px] lg:mt-4 lg:py-2 text-white py-1">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-[8px] sm:text-[9px] lg:text-[18px] lg:mb-1 font-semibold text-white mb-1">Make Money
+                        with Us</h4>
+                    <ul class="text-[5px] sm:text-[7px] lg:text-[15px] lg:mt-4 lg:py-2 text-white py-1">
+                        <li><a href="#">Sell on Amazon</a></li>
+                        <li><a href="#">Sell under Amazon Accelerator</a></li>
+                        <li><a href="#">Protect and Build Your Brand</a></li>
+                        <li><a href="#">Amazon Global Selling</a></li>
+                        <li><a href="#">Supply to Amazon</a></li>
+                        <li><a href="#">Become an Affiliate</a></li>
+                        <li><a href="#">Fulfilment by Amazon</a></li>
+                        <li><a href="#">Advertise Your Products</a></li>
+                        <li><a href="#">Amazon Pay on Merchants</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-[8px] sm:text-[9px] lg:text-[18px] lg:mb-1 font-semibold text-white mb-1">Let Us
+                        Help You</h4>
+                    <ul class="text-[6px] sm:text-[7px] lg:text-[15px] lg:mt-4 lg:py-2 text-white py-1">
+                        <li><a href="#">Your Account</a></li>
+                        <li><a href="#">Returns Centre</a></li>
+                        <li><a href="#">Recalls and Product Safety Alerts</a></li>
+                        <li><a href="#">100% Purchase Protection</a></li>
+                        <li><a href="#">Amazon App Download</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="bg-[#232f3e] border-t border-gray-500 flex justify-center items-center lg:p-8 p-4">
+                <img src="./asset/amazon_white_logo.png" class="h-[12px] lg:h-[30px] sm:h-[15px] lg:mr-8 mr-4" alt=""
+                    srcset="">
+                <section class="text-[8px] px-4 sm:px-5 sm:text-[9px] lg:text-[12px] text-white border border-white">
+                    <option value=""> English</option>
+                </section>
+                <div class="flex justify-center items-center border px-4  border-white ml-1 w-[70px]">
+                    <img src="./asset/india-flag-icon.webp" class="w-[13px] h-[10px] sm:h-[11px] mr-1 lg:ml-2 lg:mr-2"
+                        alt="" srcset="">
+                    <h6 class="text-white text-[8px] sm:text-[9px] lg:text-[12px]">India</h6>
+                </div>
+            </div>
+
+            <div class="bg-[#131a22]  text-white flex flex-col justify-start gap-1 lg:py-4 py-2">
+
+                <div class="flex justify-start gap-10 lg:justify-center lg:gap-40 lg:p-2">
+
+                    <div class="flex flex-col  gap-2 m-1">
+
+                        <div>
+                            <ul>
+                                <li class="font-semibold text-white text-[7px] mt-2 lg:text-[10px] ">AbeBooks</li>
+                                <li class="text-[6px] lg:text-[8px]">Books, art</li>
+                                <li class="text-[6px] lg:text-[8px]">& collectibles</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <ul>
+                                <li class="font-semibold text-white text-[7px] mt-2 lg:text-[10px] ">Shopbop</li>
+                                <li class="text-[6px] lg:text-[8px]">Designer</li>
+                                <li class="text-[6px] lg:text-[8px]">Fashion-Brand</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="flex flex-col gap-2 ">
+
+                        <div>
+                            <ul>
+                                <li class="font-semibold text-white sm:text-[8px] text-[7px] mt-2 lg:text-[10px]">Amazon
+                                    Web Services
+                                </li>
+                                <li class="text-[6px] lg:text-[8px] sm:text-[7px]">Scalable Cloud</li>
+                                <li class="text-[6px] lg:text-[8px] sm:text-[7px]">Computing Services</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <ul>
+                                <li class="font-semibold text-white sm:text-[8px]  text-[7px] mt-2 lg:text-[10px] ">
+                                    Amazon Business
+                                </li>
+                                <li class="text-[6px] lg:text-[8px] sm:text-[7px]">Everything for</li>
+                                <li class="text-[6px] lg:text-[8px] sm:text-[7px]">Your Business</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="flex flex-col gap-2 ">
+
+                        <div>
+                            <ul>
+                                <li class="font-semibold text-white sm:text-[8px]  text-[7px] mt-2 lg:text-[10px]">
+                                    Audible</li>
+                                <li class="text-[6px] lg:text-[8px] sm:text-[7px]">Download</li>
+                                <li class="text-[6px] lg:text-[8px] sm:text-[7px]">Audio Books</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <ul>
+                                <li class="font-semibold text-white sm:text-[8px]  text-[7px] mt-2 lg:text-[10px]">
+                                    Amazon
+                                    Prime Music
+                                </li>
+                                <li class="text-[6px] lg:text-[8px] sm:text-[7px]">100 million songs</li>
+                                <li class="text-[6px] lg:text-[8px] sm:text-[7px]">15 million podcasts</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="flex flex-col gap-2 ">
+
+                        <div>
+                            <ul>
+                                <li class="font-semibold text-white sm:text-[8px]  text-[7px] mt-2 lg:text-[10px] ">IMDb
+                                </li>
+                                <li class="text-[6px] lg:text-[8px] sm:text-[7px]">Movies, TV</li>
+                                <li class="text-[6px] lg:text-[8px] sm:text-[7px]">& Celebrities</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="text-center text-gray-400 text-[6px] mt-3 lg:mt-2 mb-2">
+                    <p>Conditions of Use &nbsp; | &nbsp; Privacy Notice &nbsp; | &nbsp; Interest-Based Ads</p>
+                    <p class="mt-1">© 1996–2026, Amazon.com, Inc. or its affiliates</p>
+                </div>
+            </div>
+
+
+
+        </footer>
+
     </div>
 
-    
+    <script src="script.js"></script>
 </body>
 
 </html>
