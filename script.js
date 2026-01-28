@@ -14,66 +14,29 @@ document.getElementById('right-swap').addEventListener('click', () => {
 })
 
 
-const beautyCardImageElement1 = document.getElementById('beauty-card-image-1')
-const beautyCardTextElement1 = document.getElementById('beauty-card-text-1')
-document.querySelectorAll('#beauty-card-options-1').forEach(option => {
-    option.addEventListener('click', () => {
-        beautyCardImageElement1.setAttribute('src', option?.firstElementChild?.getAttribute('src'))
-        // console.log(option.lastElementChild.innerText);
-        beautyCardTextElement1.innerHTML = option?.lastElementChild?.innerHTML
-        beautyCardImageElement1.classList.remove('hidden')
-        // console.log(beautyCardImageElement1.innerHTML);
-        document.querySelectorAll('#beauty-card-options-1').forEach(opt => {
-            opt.firstElementChild.classList.remove('border-2');
+
+document.querySelectorAll('.beauty-card-container').forEach(card => {
+    const img = card.querySelector('.beauty-card-image')
+    const cardText = card.querySelector('.beauty-card-text');
+
+    console.log(cardText);
+
+
+    const imgOptions = card.querySelectorAll('.beauty-card-options')
+    console.log(imgOptions);
+
+    imgOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            console.log(option.firstElementChild.getAttribute('src'));
+            img.setAttribute('src', option.firstElementChild.getAttribute('src'))
+            cardText.innerHTML = option.lastElementChild.innerHTML
+            imgOptions.forEach(opt => {
+                opt.firstElementChild.classList.remove('border-2')
+            })
+            option.firstElementChild.classList.add('border-2')
         })
-        option.firstElementChild.classList.add('border-2')
-
-    })
-})
-
-const beautyCardImageElement2 = document.getElementById('beauty-card-image-2')
-const beautyCardTextElement2 = document.getElementById('beauty-card-text-2')
-document.querySelectorAll('#beauty-card-options-2').forEach(option => {
-    option.addEventListener('click', () => {
-        beautyCardImageElement2.setAttribute('src', option?.firstElementChild?.getAttribute('src'))
-        // console.log(option.lastElementChild.innerText);
-        beautyCardTextElement2.innerHTML = option?.lastElementChild?.innerHTML
-        document.querySelectorAll('#beauty-card-options-2').forEach(opt => {
-            opt.firstElementChild.classList.remove('border-2');
-        })
-        option.firstElementChild.classList.add('border-2')
-    })
-})
-
-const beautyCardImageElement3 = document.getElementById('beauty-card-image-3')
-const beautyCardTextElement3 = document.getElementById('beauty-card-text-3')
-document.querySelectorAll('#beauty-card-options-3').forEach(option => {
-
-    option.addEventListener('click', () => {
-        beautyCardImageElement3.setAttribute('src', option?.firstElementChild?.getAttribute('src'))
-        // console.log(option.lastElementChild.innerText);
-        beautyCardTextElement3.innerHTML = option?.lastElementChild?.innerHTML
-        document.querySelectorAll('#beauty-card-options-3').forEach(opt => {
-            opt.firstElementChild.classList.remove('border-2');
-        })
-        option.firstElementChild.classList.add('border-2')
-
     })
 
-})
-
-const beautyCardImageElement4 = document.getElementById('beauty-card-image-4')
-const beautyCardTextElement4 = document.getElementById('beauty-card-text-4')
-document.querySelectorAll('#beauty-card-options-4').forEach(option => {
-    option.addEventListener('click', () => {
-        beautyCardImageElement4.setAttribute('src', option?.firstElementChild?.getAttribute('src'))
-        // console.log(option.lastElementChild.innerText);
-        beautyCardTextElement4.innerHTML = option?.lastElementChild?.innerHTML
-        document.querySelectorAll('#beauty-card-options-4').forEach(opt => {
-            opt.firstElementChild.classList.remove('border-2');
-        })
-        option.firstElementChild.classList.add('border-2')
-    })
 })
 
 
