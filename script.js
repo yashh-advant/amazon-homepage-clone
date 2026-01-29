@@ -1,15 +1,15 @@
-const images = document.querySelectorAll(".carousel-img");
 const leftBtn = document.getElementById("left-swap");
+const images = document.querySelectorAll(".carousel-img");
 const rightBtn = document.getElementById("right-swap");
 
 // console.log(images.length);
 let currentIndex = 0;
 
 rightBtn.addEventListener("click", () => {
+    // images[currentIndex].classList.add('translate-x-[500%]')
     images[currentIndex].classList.add('hidden')
     currentIndex = (currentIndex + 1) % images.length;
     images[currentIndex].classList.remove('hidden')
-
 });
 
 leftBtn.addEventListener("click", () => {
@@ -119,21 +119,21 @@ function renderCards(toShowInPage, startIndex = 0) {
 
 
         const div = document.createElement('div');
-        div.classList = 'm-4'
+        div.classList = ' sm:m-2 lg:m-4 max-w-[150px]'
 
         const imageWrapper = document.createElement('div');
         imageWrapper.classList = 'flex justify-center'
 
         const image = document.createElement('img');
         image.src = product.img;
-        image.className = "w-[50px] h-[50px] sm:w-[60px] sm:h-[80px] lg:w-[90px] lg:h-[100px] mx-auto";
+        image.className = "w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] lg:w-[90px] lg:h-[100px] mx-auto";
 
         imageWrapper.append(image);
 
         const description = document.createElement('h6');
         description.innerText = product.title;
         description.className =
-            "text-[7px] text-blue-500 sm:text-[9px] lg:text-[11px] max-w-[80px] line-clamp-4";
+            "text-[7px] text-blue-500 sm:text-[9px] lg:text-[11px]  line-clamp-4";
 
 
 
@@ -165,7 +165,7 @@ function renderCards(toShowInPage, startIndex = 0) {
 
         const para = document.createElement('p');
         para.innerText = product.delivery;
-        para.className = "text-[7px] sm:text-[9px] lg:text-[11px] line-clamp-2 max-w-[80px]";
+        para.className = "text-[7px] sm:text-[9px] lg:text-[11px] line-clamp-2 ";
 
         div.append(imageWrapper);
         div.append(description);
@@ -278,13 +278,6 @@ const productsForPagination = [
         delivery: "Get it by Friday, January 30 FREE Delivery by Amazon"
     },
     {
-        img: "./asset/pagination-2.jpg",
-        title: "TrueDecor Metal Bread Box Set Sourdough Bread Box 4.1L Airtight Bread Storange Box For Kitchen Bread Dispenser Food Grade Storage Box (Red)",
-        stars: 3,
-        price: 545,
-        delivery: "Get it by Friday, January 30 FREE Delivery by Amazon"
-    },
-    {
         img: "./asset/pagination-4.jpg",
         title: "TrueDecor Metal Bread Box Set Sourdough Bread Box 4.1L Airtight Bread Storange Box For Kitchen Bread Dispenser Food Grade Storage Box (Red)",
         stars: 4,
@@ -292,6 +285,13 @@ const productsForPagination = [
         delivery: "Get it by Friday, January 26 FREE Delivery by Amazon"
     },
     {
+        img: "./asset/pagination-2.jpg",
+        title: "TrueDecor Metal Bread Box Set Sourdough Bread Box 4.1L Airtight Bread Storange Box For Kitchen Bread Dispenser Food Grade Storage Box (Red)",
+        stars: 3,
+        price: 545,
+        delivery: "Get it by Friday, January 30 FREE Delivery by Amazon"
+    },
+    {
         img: "./asset/pagination-3.jpg",
         title: "TrueDecor Metal Bread Box Set Sourdough Bread Box 4.1L Airtight Bread Storange Box For Kitchen Bread Dispenser Food Grade Storage Box (Red)",
         stars: 2,
@@ -313,6 +313,27 @@ const productsForPagination = [
         delivery: "Get it by Friday, January 30 FREE Delivery by Amazon"
     },
     {
+        img: "./asset/pagination-2.jpg",
+        title: "TrueDecor Metal Bread Box Set Sourdough Bread Box 4.1L Airtight Bread Storange Box For Kitchen Bread Dispenser Food Grade Storage Box (Red)",
+        stars: 3,
+        price: 545,
+        delivery: "Get it by Friday, January 30 FREE Delivery by Amazon"
+    },
+    {
+        img: "./asset/pagination-3.jpg",
+        title: "TrueDecor Metal Bread Box Set Sourdough Bread Box 4.1L Airtight Bread Storange Box For Kitchen Bread Dispenser Food Grade Storage Box (Red)",
+        stars: 2,
+        price: 608,
+        delivery: "Get it by Friday, January 30 FREE Delivery by Amazon"
+    },
+    {
+        img: "./asset/pagination-1.jpg",
+        title: "TrueDecor Metal Bread Box Set Sourdough Bread Box 4.1L Airtight Bread Storange Box For Kitchen Bread Dispenser Food Grade Storage Box (Red)",
+        stars: 3,
+        price: 998,
+        delivery: "Get it by Friday, January 30 FREE Delivery by Amazon"
+    },
+    {
         img: "./asset/pagination-4.jpg",
         title: "TrueDecor Metal Bread Box Set Sourdough Bread Box 4.1L Airtight Bread Storange Box For Kitchen Bread Dispenser Food Grade Storage Box (Red)",
         stars: 4,
@@ -331,20 +352,6 @@ const productsForPagination = [
         title: "TrueDecor Metal Bread Box Set Sourdough Bread Box 4.1L Airtight Bread Storange Box For Kitchen Bread Dispenser Food Grade Storage Box (Red)",
         stars: 3,
         price: 998,
-        delivery: "Get it by Friday, January 30 FREE Delivery by Amazon"
-    },
-    {
-        img: "./asset/pagination-2.jpg",
-        title: "TrueDecor Metal Bread Box Set Sourdough Bread Box 4.1L Airtight Bread Storange Box For Kitchen Bread Dispenser Food Grade Storage Box (Red)",
-        stars: 3,
-        price: 545,
-        delivery: "Get it by Friday, January 30 FREE Delivery by Amazon"
-    },
-    {
-        img: "./asset/pagination-4.jpg",
-        title: "TrueDecor Metal Bread Box Set Sourdough Bread Box 4.1L Airtight Bread Storange Box For Kitchen Bread Dispenser Food Grade Storage Box (Red)",
-        stars: 4,
-        price: 925,
         delivery: "Get it by Friday, January 30 FREE Delivery by Amazon"
     },
     {
@@ -364,14 +371,14 @@ renderCards(toShowInPage)
 
 document.getElementById('pagination-left').addEventListener('click', () => {
     const currentPage = Number(document.getElementById('current-page').innerText)
-    console.log(currentPage);
+    // console.log(currentPage);
 
     if (currentPage == 1) {
         return;
     }
 
     let startIndex = (toShowInPage * (currentPage - 1)) - toShowInPage
-    console.log(startIndex);
+    // console.log(startIndex);
 
     paginationContainer.innerHTML = ''
 
@@ -383,14 +390,14 @@ document.getElementById('pagination-left').addEventListener('click', () => {
 
 document.getElementById('pagination-right').addEventListener('click', () => {
     const currentPage = Number(document.getElementById('current-page').innerText)
-    console.log(currentPage);
+    // console.log(currentPage);
 
     if (currentPage == Math.ceil(productsForPagination.length / Number(toShowInPage))) {
         return;
     }
 
     let startIndex = productsForPagination.length - (productsForPagination.length - currentPage * toShowInPage);
-    console.log(startIndex);
+    // console.log(startIndex);
 
     paginationContainer.innerHTML = ''
 
@@ -404,9 +411,10 @@ document.getElementById('pagination-right').addEventListener('click', () => {
 const goToFirstPage = document.querySelector('.start-over')
 
 goToFirstPage.addEventListener('click', () => {
-    console.log(`to show ${toShowInPage}`);
+    // console.log(`to show ${toShowInPage}`);
     document.getElementById('current-page').innerText = 1
     paginationContainer.innerHTML = ''
     renderCards(toShowInPage)
 })
-// window.addEventListener('')
+
+

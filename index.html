@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="m-0 p-0 bg-black overflow-x-hidden font-sans scroll-smooth">
+<body class="m-0 p-0 bg-black  font-sans ">
 
     <div class="flex flex-col min-w-0 bg-[#e3e6e6] min-h-screen w-full">
 
@@ -94,18 +94,18 @@
             <div class="xl:block hidden">Toys & Games</div>
         </header>
 
-        <section class="relative flex  bg-red-500">
+        <section class="relative  bg-red-500">
             <div
-                class="h-[250px] flex lg:h-[500px] sm:h-[380px] lg:flex lg:justify-center lg:items-start flex-1   bg-[#e3e6e6]">
+                class="relative h-[250px] w-full lg:h-[500px] sm:h-[380px] lg:flex lg:justify-center lg:items-start  overflow-hidden  bg-[#e3e6e6]">
                 <button id="left-swap"
                     class="absolute  lg:text-[50px] z-20 text-[25px] text-gray-400 font-light top-5 sm:top-8 sm:left-2 top-5 left-1">
                     < </button>
-                        <img class="carousel-img flex-1 min-w-0 w-full lg:flex-none sm:h-[260px] lg:h-[380px] h-[180px]
-                           transition-transform duration-500 ease-in-out " src="./asset/carousel-1.jpg" />
-                        <img class="carousel-img flex-1 min-w-0 w-full lg:flex-none sm:h-[260px] lg:h-[380px] h-[180px]
-                           transition-transform duration-500 ease-in-out hidden" src="./asset/carousel-2.jpg" />
-                        <img class="carousel-img flex-1 min-w-0 w-full lg:flex-none sm:h-[260px] lg:h-[380px] h-[180px]
-                           transition-transform duration-500 ease-in-out hidden" src="./asset/carousel-3.jpg" />
+                        <img class="carousel-img w-full  lg:flex-none sm:h-[260px] lg:h-[380px] h-[180px]
+                    transform transition-transform duration-5000 ease-in-out " src="./asset/carousel-1.jpg" />
+                        <img class="carousel-img  w-full lg:flex-none sm:h-[260px] lg:h-[380px] h-[180px]
+                    transform transition-transform duration-5000 ease-in-out hidden" src="./asset/carousel-2.jpg" />
+                        <img class="carousel-img  w-full lg:flex-none sm:h-[260px] lg:h-[380px] h-[180px]
+                        transform transition-transform duration-500 ease-in-out hidden" src="./asset/carousel-3.jpg" />
                         <button id="right-swap"
                             class="absolute z-20 lg:text-[50px] text-[25px] text-gray-400 font-light top-5 sm:top-8 sm:right-2 right-1">></button>
             </div>
@@ -952,18 +952,19 @@
 
                 <h4 class="self-end text-[6px] mb-2 sm:text-[9px] lg:font-bold lg:text-[12px] font-semibold">Page
                     <span id="current-page">1</span> of <span id="total-page"></span> |
-                    <span class="start-over inline text-blue-500 ml-1">  Start Over</span>
+                    <span class="start-over inline text-blue-500 ml-1"> Start Over</span>
                 </h4>
 
-                
+
 
             </div>
 
-            <div class="relative flex justify-evenly gap-4 sm:gap-6  px-12 sm:px-16 lg:px-20 ">
+            <div class="relative flex justify-evenly  sm:gap-6 px-12 sm:px-16 lg:px-16 ">
                 <div id="pagination-left"
                     class="absolute absolute border-1 z-20 border-gray-400 rounded-lg px-2 py-[3px] text-gray-400 left-2 top-10">
                     < </div>
-                        <div class="pagination-container flex justify-evenly gap-4 sm:gap-6 overflow-hidden"></div>
+                        <div class="pagination-container gap-2 flex justify-evenly  lg:gap-8  sm:gap-6 overflow-hidden">
+                        </div>
 
                         <div id="pagination-right"
                             class="absolute absolute border-1 z-20 border-gray-400 rounded-lg px-2 py-[3px] text-gray-400 right-2 top-10">
