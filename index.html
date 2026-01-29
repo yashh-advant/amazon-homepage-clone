@@ -944,27 +944,31 @@
             </div>
         </div>
 
-        <div class="w-full flex flex-col sm:h-[130px] mt-2  lg:h-[350px] h-[180px] bg-white  p-2 ">
+        <div class="w-full flex flex-col sm:h-[240px] mt-2  lg:h-[350px] h-[180px] bg-white  p-2 ">
             <div class="flex justify-between items-center p-1">
-                <h4 class="text-[10px] sm:text-[13px] lg:font-bold lg:text-[16px] font-semibold">Inspired by your
+                <h4 class="text-[10px] sm:text-[13px] lg:font-bold sm:mb-4 lg:text-[16px] font-semibold">Inspired by
+                    your
                     browsing history</h4>
 
-                <h4 class="self-end text-[6px] mb-2 sm:text-[9px] lg:font-bold lg:text-[12px] font-semibold">Page 1 of 4
+                <h4 class="self-end text-[6px] mb-2 sm:text-[9px] lg:font-bold lg:text-[12px] font-semibold">Page
+                    <span id="current-page">1</span> of <span id="total-page"></span> |
+                    <span class="start-over inline text-blue-500 ml-1">  Start Over</span>
                 </h4>
+
+                
 
             </div>
 
-            <div class="relative flex justify-evenly gap-4 overflow-hidden px-12 pagination-container">
-
+            <div class="relative flex justify-evenly gap-4 sm:gap-6  px-12 sm:px-16 lg:px-20 ">
                 <div id="pagination-left"
-                    class="absolute border-1 border-gray-400 rounded-lg px-2 py-[3px] text-gray-400 left-2 top-10">
+                    class="absolute absolute border-1 z-20 border-gray-400 rounded-lg px-2 py-[3px] text-gray-400 left-2 top-10">
                     < </div>
-
-
+                        <div class="pagination-container flex justify-evenly gap-4 sm:gap-6 overflow-hidden"></div>
 
                         <div id="pagination-right"
-                            class="absolute absolute border-1 border-gray-400 rounded-lg px-2 py-[3px] text-gray-400 right-2 top-10">
-                            ></div>
+                            class="absolute absolute border-1 z-20 border-gray-400 rounded-lg px-2 py-[3px] text-gray-400 right-2 top-10">
+                            >
+                        </div>
                 </div>
             </div>
 
@@ -1000,7 +1004,8 @@
                 <div class="flex justify-around bg-[#232f3e] gap-2 p-4">
 
                     <div>
-                        <h4 class="text-[8px] sm:text-[9px] lg:text-[18px] lg:mb-1 font-semibold text-white mb-1">Get to
+                        <h4 class="text-[8px] sm:text-[9px] lg:text-[18px] lg:mb-1 font-semibold text-white mb-1">
+                            Get to
                             Know Us</h4>
                         <ul class="text-[6px] sm:text-[7px] lg:text-[15px] lg:mt-4 lg:py-2 text-white py-1">
                             <li><a href="#">About Amazon</a></li>
@@ -1022,7 +1027,8 @@
                     </div>
 
                     <div>
-                        <h4 class="text-[8px] sm:text-[9px] lg:text-[18px] lg:mb-1 font-semibold text-white mb-1">Make
+                        <h4 class="text-[8px] sm:text-[9px] lg:text-[18px] lg:mb-1 font-semibold text-white mb-1">
+                            Make
                             Money
                             with Us</h4>
                         <ul class="text-[5px] sm:text-[7px] lg:text-[15px] lg:mt-4 lg:py-2 text-white py-1">
@@ -1039,7 +1045,8 @@
                     </div>
 
                     <div>
-                        <h4 class="text-[8px] sm:text-[9px] lg:text-[18px] lg:mb-1 font-semibold text-white mb-1">Let Us
+                        <h4 class="text-[8px] sm:text-[9px] lg:text-[18px] lg:mb-1 font-semibold text-white mb-1">
+                            Let Us
                             Help You</h4>
                         <ul class="text-[6px] sm:text-[7px] lg:text-[15px] lg:mt-4 lg:py-2 text-white py-1">
                             <li><a href="#">Your Account</a></li>
@@ -1075,7 +1082,8 @@
 
                             <div>
                                 <ul>
-                                    <li class="font-semibold text-white text-[7px] mt-2 lg:text-[10px] ">AbeBooks</li>
+                                    <li class="font-semibold text-white text-[7px] mt-2 lg:text-[10px] ">AbeBooks
+                                    </li>
                                     <li class="text-[6px] lg:text-[8px]">Books, art</li>
                                     <li class="text-[6px] lg:text-[8px]">& collectibles</li>
                                 </ul>
@@ -1083,7 +1091,8 @@
 
                             <div>
                                 <ul>
-                                    <li class="font-semibold text-white text-[7px] mt-2 lg:text-[10px] ">Shopbop</li>
+                                    <li class="font-semibold text-white text-[7px] mt-2 lg:text-[10px] ">Shopbop
+                                    </li>
                                     <li class="text-[6px] lg:text-[8px]">Designer</li>
                                     <li class="text-[6px] lg:text-[8px]">Fashion-Brand</li>
                                 </ul>
