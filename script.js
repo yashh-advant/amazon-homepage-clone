@@ -1,25 +1,38 @@
 const leftBtn = document.getElementById("left-swap");
-const images = document.querySelectorAll(".carousel-img");
 const rightBtn = document.getElementById("right-swap");
+const images = document.querySelectorAll('.carousel-img')
 
-// console.log(images.length);
-let currentIndex = 0;
+let currentIndex = 1;
+const path = document.querySelector('.path')
 
 rightBtn.addEventListener("click", () => {
-    // images[currentIndex].classList.add('translate-x-[500%]')
-    images[currentIndex].classList.add('hidden')
-    currentIndex = (currentIndex + 1) % images.length;
-    images[currentIndex].classList.remove('hidden')
+    console.log(`current index ${currentIndex} and image lenght ${images.length}`);
+
+    if (currentIndex == images.length) {
+        currentIndex = 1;
+        path.classList.remove(`translate-x-[-200%]`)
+        path.classList.remove(`translate-x-[-100%]`)
+
+        return;
+
+    }
+    path.classList.add(`translate-x-[-${currentIndex * 100}%]`)
+    currentIndex++;
+
 });
 
 leftBtn.addEventListener("click", () => {
-    images[currentIndex].classList.add('hidden')
-
-    currentIndex = currentIndex - 1;
-    if (currentIndex <= 0) {
-        currentIndex = 2;
+    console.log(`current index ${currentIndex} and image lenght ${images.length}`);
+    
+    if (currentIndex == 1) {
+        currentIndex = images.length;
+        path.classList.add(`translate-x-[-${(images.length - 1) * 100}%]`)
+        return;
+        
     }
-    images[currentIndex].classList.remove('hidden')
+    currentIndex--;
+    path.classList.remove(`translate-x-[-${currentIndex * 100}%]`)
+    path.classList.add(`translate-x-[-${(currentIndex -1) * 100}%]`)
 
 });
 
@@ -418,3 +431,7 @@ goToFirstPage.addEventListener('click', () => {
 })
 
 
+document.querySelector('a[href="#top"]').addEventListener('click', (e) => {
+  e.preventDefault()
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+})
