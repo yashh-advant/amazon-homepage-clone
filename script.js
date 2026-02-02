@@ -23,16 +23,16 @@ rightBtn.addEventListener("click", () => {
 
 leftBtn.addEventListener("click", () => {
     console.log(`current index ${currentIndex} and image lenght ${images.length}`);
-    
+
     if (currentIndex == 1) {
         currentIndex = images.length;
         path.classList.add(`translate-x-[-${(images.length - 1) * 100}%]`)
         return;
-        
+
     }
     currentIndex--;
     path.classList.remove(`translate-x-[-${currentIndex * 100}%]`)
-    path.classList.add(`translate-x-[-${(currentIndex -1) * 100}%]`)
+    path.classList.add(`translate-x-[-${(currentIndex - 1) * 100}%]`)
 
 });
 
@@ -432,6 +432,6 @@ goToFirstPage.addEventListener('click', () => {
 
 
 document.querySelector('a[href="#top"]').addEventListener('click', (e) => {
-  e.preventDefault()
-  window.scrollTo({ top: 0, behavior: 'smooth' })
+    e.preventDefault()
+    window.scrollTo({ top: 0, behavior: 'smooth' })
 })
