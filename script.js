@@ -193,6 +193,14 @@ function renderCards(toShowInPage, startIndex = 0) {
     const totalPageCount = document.getElementById('total-page')
     totalPageCount.innerText = Math.ceil(productsForPagination.length / Number(toShowInPage))
 
+    const goToFirstPage = document.querySelector('.start-over')
+
+    const currentPage = document.getElementById('current-page')
+    if (currentPage.innerText == 1) {
+        goToFirstPage.classList.add('hidden')
+    } else {
+        goToFirstPage.classList.remove('hidden')
+    }
 
 }
 
@@ -387,6 +395,7 @@ document.getElementById('pagination-left').addEventListener('click', () => {
     // console.log(currentPage);
 
     if (currentPage == 1) {
+
         return;
     }
 
@@ -424,10 +433,11 @@ document.getElementById('pagination-right').addEventListener('click', () => {
 const goToFirstPage = document.querySelector('.start-over')
 
 goToFirstPage.addEventListener('click', () => {
-    // console.log(`to show ${toShowInPage}`);
+    console.log(`to show ${toShowInPage}`);
     document.getElementById('current-page').innerText = 1
     paginationContainer.innerHTML = ''
     renderCards(toShowInPage)
+    // goToFirstPage.classList.add('hidden')
 })
 
 
